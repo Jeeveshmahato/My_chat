@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <style>
+      .all_chats {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 20px 0;
+      }
+      .profile-card {
+        width: 120px;
+        height: 90px;
+        background: #eef2f7;
+        padding: 15px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 1300px) {
+        .profile-card {
+          height: 50px;
+        }
+      }
+      .profile-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid white;
+        position: absolute;
+        left: 50%;
+        top: -50px;
+        transform: translate(-50%, 0);
+      }
+      .status-indicator {
+        width: 12px;
+        height: 12px;
+        background-color: #00c853;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -10px;
+        right: -25px;
+        border: 2px solid white;
+      }
+      .profile-name {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+      }
+      .all_chats {
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all_chats">
+      <div class="profile-card">
+        <div
+          style="
+            position: relative;
+            display: inline-block;
+            margin-top: -40px;
+            margin-top: -40px;
+          "
+        >
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Profile"
+            class="profile-image"
+          />
+          <div class="status-indicator"></div>
+        </div>
+        <div class="profile-name">Patrick</div>
+      </div>
+      <div class="profile-card">
+        <div
+          style="
+            position: relative;
+            display: inline-block;
+            margin-top: -40px;
+            margin-top: -40px;
+          "
+        >
+          <img
+            src="https://images.unsplash.com/photo-1512288094938-363287817259?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Profile"
+            class="profile-image"
+          />
+          <div class="status-indicator"></div>
+        </div>
+        <div class="profile-name">Doris</div>
+      </div>
+      <div class="profile-card">
+        <div
+          style="position: relative; display: inline-block; margin-top: -40px"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Profile"
+            class="profile-image"
+          />
+          <div class="status-indicator"></div>
+        </div>
+        <div class="profile-name">Emily</div>
+      </div>
+
+      <div class="profile-card">
+        <div
+          style="position: relative; display: inline-block; margin-top: -40px"
+        >
+          <img
+            src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Profile"
+            class="profile-image"
+          />
+          <div class="status-indicator"></div>
+        </div>
+        <div class="profile-name">Steve</div>
+      </div>
+    </div>
+  </body>
+</html>

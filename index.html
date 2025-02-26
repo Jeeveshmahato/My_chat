@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Chat</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .container {
+        display: flex;
+        width: 100vw;
+      }
+      #menu_siderbar {
+        width: 5%;
+      }
+      #allChatss {
+        width: 35%;
+        order: 1;
+      }
+      .user_chats{
+        display: flex;
+        width: 100%;
+      }
+      @media (max-width: 1300px) {
+        #menu_siderbar {
+          width: 70px;
+        }
+        .user_chats {
+          flex-direction: column;
+          width: 88%;
+        }
+        #allChatss {
+          width: 100%;
+          order: 2;
+        }
+        #chat {
+          order: 1;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="menu_siderbar"></nav>
+
+      <div class="user_chats">
+        <div id="allChatss"></div>
+
+        <div class="chat">
+          <div id="myUserHeader"></div>
+          <div id="chat"></div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/5c118959dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $("#chat").load("chat.html");
+      $("#myUserHeader").load("myUserHeader.html");
+
+      $("#menu_siderbar").load("sidebar.html");
+      $("#allChatss").load("allChats.html");
+    </script>
+  </body>
+</html>

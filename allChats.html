@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* === CONVERSATIONS === */
+
+      .recent {
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .timer {
+        margin-left: 15%;
+        font-size: 11px;
+        padding: 3px 8px;
+        color: #bbb;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 15px;
+      }
+
+      .chat {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        order: 2;
+      }
+      @media screen and (max-width: 1300px) {
+        .chat {
+          width: 100%;
+          order: 1;
+        }
+        
+      }
+
+      .header-chat {
+        background-color: #fff;
+        height: 90px;
+        box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+      }
+
+      .chat .header-chat .icon {
+        margin-left: 30px;
+        color: #515151;
+        font-size: 14pt;
+      }
+
+      .chat .header-chat .name {
+        margin: 0 0 0 20px;
+        text-transform: uppercase;
+        font-size: 13pt;
+        color: #515151;
+      }
+      .searchbar{
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="discussions">
+      <h2 class="discussion_chat">Chats</h2>
+      <div class="discussion search">
+        <div class="searchbar">
+          <i class="fa fa-search" style="color: #868ea7" aria-hidden="true"></i>
+          <input type="text" placeholder="Search messages or users" />
+        </div>
+      </div>
+      <div id="onlineFriends"></div>
+      <h4 class="recent">Recent</h4>
+      <div id="allMyChats"></div>
+
+      <!-- Add other discussion items similarly -->
+    </section>
+    <script>
+      $("#onlineFriends").load("onlineFriends.html");
+      $("#allMyChats").load("allMyChats.html");
+    </script>
+  </body>
+</html>

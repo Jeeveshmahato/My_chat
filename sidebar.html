@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* ===== MENU ===== */
+      .menu {
+        height: 100%;
+        width: 100%;
+        background: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+      }
+
+      .menu .items {
+        list-style: none;
+        margin: auto;
+        padding: 0;
+      }
+      .item_fake {
+        height: 70px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .menu .items .item {
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #878a92;
+        font-size: 17pt;
+      }
+
+      .menu .items .item-active {
+        background-color: #cfd1d4;
+        color: #878a92;
+      }
+
+      .menu .items .item:hover {
+        cursor: pointer;
+        background-color: #cfd1d4;
+        color: #878a92;
+      }
+      .menu img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+      }
+      .dummy_item {
+        height: 70px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <ul class="items">
+        <li class="item"><i class="fa-solid fa-comment"></i></li>
+        <li class="item"><i class="fa-solid fa-user-tie"></i></li>
+        <li class="item item-active"><i class="fa-solid fa-message"></i></li>
+        <li class="item">
+          <i class="fa-solid fa-user-group"></i>
+        </li>
+        <li class="item"><i class="fa-solid fa-user"></i></li>
+
+        <li class="item"><i class="fa-solid fa-gear"></i></li>
+        <li class="item"><i class="fa-solid fa-moon"></i></li>
+        <li class="item"><i class="fa-solid fa-globe"></i></li>
+        <div class="dummy_item"></div>
+        <li class="item_fake">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1734218353773-c123abefb966?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </li>
+      </ul>
+      <div class="profile_img"></div>
+    </nav>
+    <script
+      src="https://kit.fontawesome.com/5c118959dd.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

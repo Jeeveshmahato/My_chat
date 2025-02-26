@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      /* ===== MENU ===== */
+      .menu {
+        height: 100vh;
+        width: 70px;
+        background: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+      }
+
+      .menu .items {
+        list-style: none;
+        margin: auto;
+        padding: 0;
+      }
+
+      .menu .items .item {
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #878a92;
+        font-size: 17pt;
+      }
+
+      .menu .items .item-active {
+        background-color: #cfd1d4;
+        color: #878a92;
+      }
+
+      .menu .items .item:hover {
+        cursor: pointer;
+        background-color: #cfd1d4;
+        color: #878a92;
+      }
+      .menu img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+      }
+      /* === CONVERSATIONS === */
+      .discussions {
+        width: 35%;
+        height: 100%;
+        background-color: #f5f7fb;
+        padding: 0 20px;
+        overflow-y: auto;
+      }
+
+      .discussions .discussion {
+        width: 100%;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+
+      .discussions .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #e0e0e0;
+      }
+
+      .discussions .search .searchbar {
+        height: 40px;
+        background-color: #e6ebf5;
+        width: 100%;
+        padding: 0 20px;
+        border-radius: 8px;
+        border: 1px solid #eeeeee;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .discussions .search .searchbar input {
+        margin-left: 15px;
+        height: 38px;
+        width: 100%;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+      }
+      .searchbar input {
+        background: #e6ebf5;
+      }
+      .div_friend {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+      }
+      .discussions .discussion .photo {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background: #e6e7ed;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .online {
+        position: relative;
+        top: 30px;
+        left: 35px;
+        width: 13px;
+        height: 13px;
+        background-color: #8bc34a;
+        border-radius: 13px;
+        border: 3px solid #fafafa;
+      }
+
+      .desc-contact {
+        height: 43px;
+        width: 50%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .discussions .discussion .name {
+        margin: 0 0 0 20px;
+        font-size: 11pt;
+        color: #515151;
+      }
+      .discussion_chat {
+        font-weight: 300;
+        margin-top: 20px;
+      }
+      .discussions .discussion .message {
+        margin: 6px 0 0 20px;
+        font-size: 9pt;
+        color: #515151;
+      }
+      .recent {
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .timer {
+        margin-left: 15%;
+        font-size: 11px;
+        padding: 3px 8px;
+        color: #bbb;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 15px;
+      }
+
+      .chat {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header-chat {
+        background-color: #fff;
+        height: 90px;
+        box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+      }
+
+      .chat .header-chat .icon {
+        margin-left: 30px;
+        color: #515151;
+        font-size: 14pt;
+      }
+
+      .chat .header-chat .name {
+        margin: 0 0 0 20px;
+        text-transform: uppercase;
+        font-size: 13pt;
+        color: #515151;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="menu">
+        <ul class="items">
+          <li class="item"><i class="fa-solid fa-comment"></i></li>
+          <li class="item"><i class="fa-solid fa-user-tie"></i></li>
+          <li class="item item-active"><i class="fa-solid fa-message"></i></li>
+          <li class="item">
+            <i class="fa-solid fa-user-group"></i>
+          </li>
+          <li class="item"><i class="fa-solid fa-user"></i></li>
+
+          <li class="item"><i class="fa-solid fa-gear"></i></li>
+          <li class="item"><i class="fa-solid fa-moon"></i></li>
+          <li class="item"><i class="fa-solid fa-globe"></i></li>
+          <li class="item"></li>
+          <li class="item">
+            <img
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+              alt=""
+            />
+          </li>
+        </ul>
+        <div class="profile_img"></div>
+      </nav>
+
+      <section class="discussions">
+        <h2 class="discussion_chat">Chats</h2>
+        <div class="discussion search">
+          <div class="searchbar">
+            <i
+              class="fa fa-search"
+              style="color: #868ea7"
+              aria-hidden="true"
+            ></i>
+            <input type="text" placeholder="Search messages or users" />
+          </div>
+        </div>
+        <div id="onlineFriends"></div>
+        <h4 class="recent">Recent</h4>
+        <div class="discussion message-active">
+          <div class="div_friend">
+            <div
+              class="photo"
+              style="
+                background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+              "
+            >
+              <div class="online"></div>
+            </div>
+            <div class="desc-contact">
+              <p class="name">Megan Leib</p>
+              <p class="message">9 pm at the bar if possible 😳</p>
+            </div>
+          </div>
+          <div class="timer">12 sec</div>
+        </div>
+
+        <!-- Add other discussion items similarly -->
+      </section>
+
+      <div class="chat">
+        <div id="myUserHeader"></div>
+        <div id="chat"></div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/5c118959dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $("#chat").load("chat.html");
+      $("#myUserHeader").load("myUserHeader.html");
+      $('#onlineFriends').load("onlineFriends.html");
+    </script>
+  </body>
+</html>
